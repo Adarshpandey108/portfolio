@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Adarsh Pandey</title>
+   
+    <style>
+/* Aqua Blue Theme for About Page */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to bottom, #0072ff, #00c6ff); /* Gradient similar to homepage */
+    color: #ffffff; /* White text for better readability on blue */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Blogger Section */
+.blogger-section {
+    padding: 50px;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Reuse the gradient */
+    text-align: center;
+    color: white;
+}
+
+.blogger-section .container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.blogger-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #ffffff; /* White border for contrast */
+}
+
+.blogger-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.blogger-section p {
+    font-size: 1.2rem;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 50px;
+    background-color: #f4f4f9; /* Light background for blog posts */
+    color: #333; /* Darker text for blog content */
+}
+
+.blog-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0072ff; /* Blue color for heading */
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.blog-post h3 {
+    margin-bottom: 10px;
+    color: #0072ff;
+}
+
+.read-more {
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+/* Base Theme Styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default (Light Theme) */
+body.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Common Styles for Theme Changer */
+.theme-changer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.theme-icon .sun {
+    display: block;
+}
+
+.theme-icon .moon {
+    display: none;
+}
+
+/* Icon toggle for Dark Theme */
+body.dark-theme .sun {
+    display: none;
+}
+
+body.dark-theme .moon {
+    display: block;
+}
+
+/* Smooth transition for elements when toggling theme */
+h1, h2, h3, p, a, .blogger-section, .blog-section {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Additional adjustments for dark theme colors */
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3 {
+    color: #e0e0e0;
+}
+
+body.dark-theme a {
+    color: #00aaff;
+}
+
+body.dark-theme .blog-section {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme .blog-post {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-theme footer {
+    background-color: #202020;
+    color: #ccc;
+}
+
+/* Any other elements you want to change in dark mode */
+
+
+/* Footer */
+footer {
+    background-color: #0072ff;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blogger-section, .blog-section {
+        padding: 30px;
+    }
+
+    .blogger-section h1 {
+        font-size: 2rem;
+    }
+
+    .blog-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogger-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .blogger-section p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+
+
+        /* Add styles for circular images */
+        .circular-image {
+            width: 100px; /* Set the desired width */
+            height: 100px; /* Set the desired height */
+            border-radius: 50%; /* Make it circular */
+            overflow: hidden; /* Hide overflow */
+            margin: 0 auto; /* Center the image */
+        }
+
+        .circular-image img {
+            width: 100%; /* Make image fill the container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove bottom gap */
+        }
+
+        .education-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .education-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .education-item {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: center; /* Center items */
+            margin-bottom: 40px; /* Space between items */
+        }
+
+        .education-item h3 {
+            margin-top: 15px; /* Space above the heading */
+        }
+
+        .education-item p {
+            margin-top: 5px; /* Space above the paragraph */
+            font-size: 1.1em; /* Slightly increase font size */
+        }
+    </style>
+</head>
+<body>
+    <!-- Blogger Section -->
+    <section class="blogger-section">
+        <div class="container">
+            <img src="assets/adarshprof image.png" alt="Adarsh Pandey" class="blogger-img">
+            <h1>About Me</h1>
+            <p>Hi, I'm Adarsh Pandey, an AI and ML Engineer from IIT Ropar with a passion for Full Stack Development, Data Science, and creative endeavors like singing and design. I've worked on various machine learning projects and enjoy blending technology with artistic expression.</p>
+            <p>I'm also an avid learner, always exploring new technologies and ideas. Let’s connect to build something innovative together!</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="blog-section">
+        <h2>Skills</h2>
+        <div class="blog-post">
+            <h3>Full Stack Development</h3>
+            <p>Experienced in front-end and back-end development with technologies like React, Node.js, and Spring Boot. I build responsive and efficient web applications.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Machine Learning & AI</h3>
+            <p>Proficient in machine learning algorithms, data analysis, and deep learning models. I have applied AI to various domains, including predictive modeling and data science.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Web Technologies</h3>
+            <p>Skilled in HTML, CSS, and JavaScript, with experience building dynamic and visually appealing websites. My focus is on optimizing user experiences and performance.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Creative Designer & Singer</h3>
+            <p>I have a passion for design, creating logos, resumes, and websites. In addition, I am a trained classical and devotional singer.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section">
+        <h2>Education</h2>
+        <div class="education-item">
+            <div class="circular-image">
+                <img src="assets/IIT-Ropar-Logo.webp" alt="Education Logo 1">
+            </div>
+            <h3>Minor Degree In AI & ML</h3>
+            <p>From IIT Ropar</p>
+        </div>
+        <div class="education-item">
+            <div class="circular-image">
+                <img src="assets/univ.png" alt="Education Logo 2">
+            </div>
+            <h3>Bachelor's of Computer Applications</h3>
+            <p>From Mumbai University</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="blog-section">
+        <h2>Connect with Me</h2>
+        <div class="blog-post">
+            <h3>Get in Touch</h3>
+            <p>You can reach me at:</p>
+            <p><strong>Phone:</strong> +91 9175465182</p>
+            <p><strong>Email:</strong> <a href="mailto:adarshp12052006@gmail.com" class="read-more">adarshp12052006@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adarsh-pandey-432a94315" target="_blank" class="read-more">Connect with me on LinkedIn</a></p>
+        </div>
+
+        <!-- Resume Download Button -->
+        <div class="blog-post">
+            <h3>Download My Resume</h3>
+            <a href="assets/resume1.pdf" class="read-more" download>Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Adarsh Pandey. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
