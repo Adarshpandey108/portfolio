@@ -4,8 +4,366 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Adarsh Pandey</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- General CSS -->
-    <link rel="stylesheet" href="css/blog-aqua.css"> <!-- Specific Aqua Theme CSS -->
+     <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Modern font */
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Introduction Section */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: slideInFromTop 1.2s ease-out;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    animation: slideInFromBottom 1.2s ease-out;
+}
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Reduce the padding from 15px to 10px */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin-bottom: 10px;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+
+
+
+        Aqua Blue Theme for Blog Page
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to bottom, #0072ff, #00c6ff); /* Gradient similar to homepage */
+    color: #ffffff; /* White text for better readability on blue */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Blogger Section */
+.blogger-section {
+    padding: 50px;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Reuse the gradient */
+    text-align: center;
+    color: white;
+}
+
+.blogger-section .container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.blogger-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #ffffff; /* White border for contrast */
+}
+
+.blogger-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.blogger-section p {
+    font-size: 1.2rem;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 50px;
+    background-color: #f4f4f9; /* Light background for blog posts */
+    color: #333; /* Darker text for blog content */
+}
+
+.blog-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0072ff; /* Blue color for heading */
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.blog-post h3 {
+    margin-bottom: 10px;
+    color: #0072ff;
+}
+
+.read-more {
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+/* Base Theme Styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default (Light Theme) */
+body.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Common Styles for Theme Changer */
+.theme-changer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.theme-icon .sun {
+    display: block;
+}
+
+.theme-icon .moon {
+    display: none;
+}
+
+/* Icon toggle for Dark Theme */
+body.dark-theme .sun {
+    display: none;
+}
+
+body.dark-theme .moon {
+    display: block;
+}
+
+/* Smooth transition for elements when toggling theme */
+h1, h2, h3, p, a, .blogger-section, .blog-section {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Additional adjustments for dark theme colors */
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3 {
+    color: #e0e0e0;
+}
+
+body.dark-theme a {
+    color: #00aaff;
+}
+
+body.dark-theme .blog-section {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme .blog-post {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-theme footer {
+    background-color: #202020;
+    color: #ccc;
+}
+
+/* Any other elements you want to change in dark mode */
+
+
+/* Footer */
+footer {
+    background-color: #0072ff;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blogger-section, .blog-section {
+        padding: 30px;
+    }
+
+    .blogger-section h1 {
+        font-size: 2rem;
+    }
+
+    .blog-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogger-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .blogger-section p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+    </style>
 </head>
 <body>
     <!-- Blogger Section -->
