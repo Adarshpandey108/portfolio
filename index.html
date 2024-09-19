@@ -12,6 +12,31 @@
     
     
     <style>
+        /* Add padding to the intro section to prevent overlap with the fixed header */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    animation: fadeIn 1.5s ease-in;
+    padding-top: 80px; /* Add padding equal to the height of the fixed header */
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Profile Picture Styling */
 .profile-pic {
     margin: 20px 0; /* Space between text and image */
@@ -399,6 +424,7 @@ footer {
     <!-- Header with Navigation Bar -->
     <header>
         <nav>
+            
             <div class="logo">
                 <img src="assets/logol.png" alt="Logo">
             </div>
@@ -416,7 +442,7 @@ footer {
         <h1>Hi, I'm Adarsh Pandey</h1>
         <!-- New Profile Picture Section -->
     <div class="profile-pic">
-        <img src="prof.jpg" alt="Adarsh Pandey's Profile Picture">
+        <img src="assets/prof.jpg" alt="Adarsh Pandey's Profile Picture">
     </div>
 
         <p>AI and ML Engineer From IIT Ropar</p>
