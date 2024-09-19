@@ -12,6 +12,39 @@
     
     
     <style>
+/* Profile Picture Styling */
+.profile-pic {
+    margin: 20px 0; /* Space between text and image */
+    width: 150px;   /* Diameter of the circular frame */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Adds shadow for modern look */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Animation transition */
+    display: flex; /* Center the image container */
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block;
+}
+
+/* Zoom and shadow effect on hover */
+.profile-pic:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+}
+
+/* Ensuring proper alignment of the section */
+.intro {
+    text-align: center; /* Centers the whole intro section */
+}
+
+
+
 /* General Reset */
 * {
     margin: 0;
@@ -381,6 +414,11 @@ footer {
     <!-- Hero Section with Introduction -->
     <section class="intro">
         <h1>Hi, I'm Adarsh Pandey</h1>
+        <!-- New Profile Picture Section -->
+    <div class="profile-pic">
+        <img src="prof.jpg" alt="Adarsh Pandey's Profile Picture">
+    </div>
+
         <p>AI and ML Engineer From IIT Ropar</p>
     </section>
 
