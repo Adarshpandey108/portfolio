@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Neural Networks - Adarsh Pandey Blog</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        /* Blog Post Header */
+        .blog-header {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: slideInFromTop 1.5s ease-out;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            animation: slideInFromBottom 1.5s ease-out;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #0072ff;
+        }
+
+        .blog-content p {
+            margin-bottom: 15px;
+        }
+
+        .blog-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            animation: fadeIn 2.5s ease-in;
+        }
+
+        /* Like/Dislike Buttons */
+        .like-dislike {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .like-dislike button {
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .like-dislike button:hover {
+            background-color: #005bb5;
+        }
+
+        .like-dislike button:focus {
+            outline: none;
+        }
+
+        .like-count, .dislike-count {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-header p {
+                font-size: 1rem;
+            }
+
+            .blog-content {
+                padding: 15px;
+            }
+
+            .blog-content h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .blog-header p {
+                font-size: 0.9rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Blog Post Header -->
+    <section class="blog-header">
+        <h1>Understanding Neural Networks</h1>
+        <p>By Adarsh Pandey - September 19, 2024</p>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+        <h2>What are Neural Networks?</h2>
+        <p>
+            Neural networks are a subset of machine learning models inspired by the structure and functioning of the human brain. They consist of interconnected layers of nodes (neurons), each of which processes inputs to produce an output. These networks can learn from vast amounts of data and have been used in a variety of applications such as image recognition, natural language processing, and predictive modeling.
+        </p>
+        <img src="assets/neural-network-diagram.png" alt="Neural Network Diagram">
+
+        <h2>How Do Neural Networks Work?</h2>
+        <p>
+            Neural networks process data through layers: an input layer, hidden layers, and an output layer. Each connection between the neurons has a weight that is adjusted during training. The learning process involves minimizing the error (loss) between the predicted and actual outputs through an optimization process called backpropagation. Over time, neural networks can learn highly complex patterns in data.
+        </p>
+
+        <h2>Applications of Neural Networks</h2>
+        <p>
+            Neural networks have revolutionized industries. In healthcare, they are used for diagnosing diseases from medical images. In finance, they help in predicting stock prices and managing risks. In autonomous driving, they enable cars to understand and navigate their environment. These applications show the power and versatility of neural networks in solving real-world problems.
+        </p>
+    </div>
+
+    <!-- Like and Dislike Section -->
+    <div class="like-dislike">
+        <button id="likeBtn">👍 Like</button>
+        <button id="dislikeBtn">👎 Dislike</button>
+        <div class="like-count" id="likeCount">Likes: 0</div>
+        <div class="dislike-count" id="dislikeCount">Dislikes: 0</div>
+    </div>
+
+    <!-- External JS -->
+    <script>
+        // Like and Dislike Counter Functionality
+        let likeCount = 0;
+        let dislikeCount = 0;
+
+        const likeBtn = document.getElementById('likeBtn');
+        const dislikeBtn = document.getElementById('dislikeBtn');
+        const likeDisplay = document.getElementById('likeCount');
+        const dislikeDisplay = document.getElementById('dislikeCount');
+
+        likeBtn.addEventListener('click', () => {
+            likeCount++;
+            likeDisplay.textContent = `Likes: ${likeCount}`;
+        });
+
+        dislikeBtn.addEventListener('click', () => {
+            dislikeCount++;
+            dislikeDisplay.textContent = `Dislikes: ${dislikeCount}`;
+        });
+    </script>
+</body>
+</html>
