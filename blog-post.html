@@ -6,165 +6,166 @@
     <link rel="icon" type="image/png" href="favicon1.png">
     <title>Understanding Neural Networks - Adarsh Pandey Blog</title>
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            animation: fadeIn 1.5s ease-in;
-        }
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in;
+}
 
-        /* Blog Post Header */
-        .blog-header {
-            background: linear-gradient(to right, #00c6ff, #0072ff);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
+/* Blog Post Header */
+.blog-header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
 
-        .blog-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            animation: slideInFromTop 1.5s ease-out;
-        }
+.blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: slideInFromTop 1.5s ease-out;
+}
 
-        .blog-header p {
-            font-size: 1.2rem;
-            animation: slideInFromBottom 1.5s ease-out;
-        }
+.blog-header p {
+    font-size: 1.2rem;
+    animation: slideInFromBottom 1.5s ease-out;
+}
 
-        /* Blog Content */
-        .blog-content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            animation: fadeIn 2s ease-in;
-        }
+/* Blog Content */
+.blog-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.5); /* Blue shadow */
+    border-radius: 8px;
+    animation: fadeIn 2s ease-in;
+}
 
-        .blog-content h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #0072ff;
-        }
+.blog-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #0072ff;
+}
 
-        .blog-content p {
-            margin-bottom: 15px;
-        }
+.blog-content p {
+    margin-bottom: 15px;
+}
 
-        .blog-content img {
-            width: 100%;
-            border-radius: 8px;
-            margin: 20px 0;
-            animation: fadeIn 2.5s ease-in;
-        }
+.blog-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+    animation: fadeIn 2.5s ease-in;
+}
 
-        /* Like/Dislike Buttons */
-        .like-dislike {
-            text-align: center;
-            margin-top: 30px;
-        }
+/* Like/Dislike Buttons */
+.like-dislike {
+    text-align: center;
+    margin-top: 30px;
+}
 
-        .like-dislike button {
-            background-color: #0072ff;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+.like-dislike button {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .like-dislike button:hover {
-            background-color: #005bb5;
-        }
+.like-dislike button:hover {
+    background-color: #005bb5;
+}
 
-        .like-dislike button:focus {
-            outline: none;
-        }
+.like-dislike button:focus {
+    outline: none;
+}
 
-        .like-count, .dislike-count {
-            font-size: 1rem;
-            margin-top: 10px;
-        }
+.like-count, .dislike-count {
+    font-size: 1rem;
+    margin-top: 10px;
+}
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-        @keyframes slideInFromTop {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-        @keyframes slideInFromBottom {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .blog-header h1 {
-                font-size: 2rem;
-            }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 2rem;
+    }
 
-            .blog-header p {
-                font-size: 1rem;
-            }
+    .blog-header p {
+        font-size: 1rem;
+    }
 
-            .blog-content {
-                padding: 15px;
-            }
+    .blog-content {
+        padding: 15px;
+    }
 
-            .blog-content h2 {
-                font-size: 1.6rem;
-            }
-        }
+    .blog-content h2 {
+        font-size: 1.6rem;
+    }
+}
 
-        @media (max-width: 480px) {
-            .blog-header h1 {
-                font-size: 1.8rem;
-            }
+@media (max-width: 480px) {
+    .blog-header h1 {
+        font-size: 1.8rem;
+    }
 
-            .blog-header p {
-                font-size: 0.9rem;
-            }
+    .blog-header p {
+        font-size: 0.9rem;
+    }
 
-            .blog-content h2 {
-                font-size: 1.4rem;
-            }
-        }
+    .blog-content h2 {
+        font-size: 1.4rem;
+    }
+}
+
     </style>
 </head>
 <body>
