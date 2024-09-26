@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon1.png">
+    <title>Cyber Security Essentials - Adarsh Pandey Blog</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        /* Blog Post Header */
+        .blog-header {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: slideInFromTop 1.5s ease-out;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            animation: slideInFromBottom 1.5s ease-out;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #0072ff;
+        }
+
+        .blog-content p {
+            margin-bottom: 15px;
+        }
+
+        .blog-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            animation: fadeIn 2.5s ease-in;
+        }
+
+        /* Like/Dislike Buttons */
+        .like-dislike {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .like-dislike button {
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .like-dislike button:hover {
+            background-color: #005bb5;
+        }
+
+        .like-dislike button:focus {
+            outline: none;
+        }
+
+        .like-count, .dislike-count {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-header p {
+                font-size: 1rem;
+            }
+
+            .blog-content {
+                padding: 15px;
+            }
+
+            .blog-content h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .blog-header p {
+                font-size: 0.9rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.4rem;
+            }
+        }
+        /* Blog Content */
+.blog-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4); /* Blue color shadow */
+    border-radius: 8px;
+    animation: fadeIn 2s ease-in;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Blog Post Header -->
+    <section class="blog-header">
+        <h1>Understanding Cyber Security</h1>
+        <p>By Adarsh Pandey - September 26, 2024</p>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+        <h2>What is Cyber Security?</h2>
+        <p>
+            Cyber Security refers to the practices and technologies designed to protect networks, devices, and data from unauthorized access, attacks, or damage. In an increasingly digital world, where personal and corporate data is constantly at risk, cyber security is a critical field that ensures the safety of information and prevents breaches.
+        </p>
+        <img src="assets/cyber-security.jpg" alt="Cyber Security Illustration">
+
+        <h2>Common Cyber Threats</h2>
+        <p>
+            Cyber threats come in many forms, including malware, phishing attacks, ransomware, and denial-of-service attacks. These threats can target individuals, corporations, or even governments. The key to cyber security is understanding these risks and implementing the right protective measures to mitigate them.
+        </p>
+
+        <h2>How to Protect Yourself Online</h2>
+        <p>
+            Basic protection steps include using strong, unique passwords, enabling two-factor authentication, keeping software updated, and being cautious of unsolicited emails or links. More advanced techniques involve setting up firewalls, regularly auditing your security systems, and educating yourself about the latest cyber threats.
+        </p>
+    </div>
+
+    <!-- Like and Dislike Section -->
+    <div class="like-dislike">
+        <button id="likeBtn">👍 Like</button>
+        <button id="dislikeBtn">👎 Dislike</button>
+        <div class="like-count" id="likeCount">Likes: 0</div>
+        <div class="dislike-count" id="dislikeCount">Dislikes: 0</div>
+    </div>
+
+    <!-- External JS -->
+    <!-- External JS -->
+<script>
+    // Like and Dislike Counter Functionality
+    let likeCount = 0;
+    let dislikeCount = 0;
+
+    const likeBtn = document.getElementById('likeBtn');
+    const dislikeBtn = document.getElementById('dislikeBtn');
+    const likeDisplay = document.getElementById('likeCount');
+    const dislikeDisplay = document.getElementById('dislikeCount');
+
+    likeBtn.addEventListener('click', () => {
+        if (!likeBtn.classList.contains('active')) {
+            likeCount++;
+            likeDisplay.textContent = `Likes: ${likeCount}`;
+            
+            if (dislikeBtn.classList.contains('active')) {
+                dislikeCount--;
+                dislikeDisplay.textContent = `Dislikes: ${dislikeCount}`;
+                dislikeBtn.classList.remove('active');
+            }
+
+            likeBtn.classList.add('active');
+        } else {
+            likeCount--;
+            likeDisplay.textContent = `Likes: ${likeCount}`;
+            likeBtn.classList.remove('active');
+        }
+    });
+
+    dislikeBtn.addEventListener('click', () => {
+        if (!dislikeBtn.classList.contains('active')) {
+            dislikeCount++;
+            dislikeDisplay.textContent = `Dislikes: ${dislikeCount}`;
+            
+            if (likeBtn.classList.contains('active')) {
+                likeCount--;
+                likeDisplay.textContent = `Likes: ${likeCount}`;
+                likeBtn.classList.remove('active');
+            }
+
+            dislikeBtn.classList.add('active');
+        } else {
+            dislikeCount--;
+            dislikeDisplay.textContent = `Dislikes: ${dislikeCount}`;
+            dislikeBtn.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
