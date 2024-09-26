@@ -194,6 +194,7 @@
         </p>
     </div>
 
+   
     <!-- Like and Dislike Section -->
     <div class="like-dislike">
         <button id="likeBtn">👍 Like</button>
@@ -203,25 +204,55 @@
     </div>
 
     <!-- External JS -->
-    <script>
-        // Like and Dislike Counter Functionality
-        let likeCount = 0;
-        let dislikeCount = 0;
+    <!-- External JS -->
+<script>
+    // Like and Dislike Counter Functionality
+    let likeCount = 0;
+    let dislikeCount = 0;
 
-        const likeBtn = document.getElementById('likeBtn');
-        const dislikeBtn = document.getElementById('dislikeBtn');
-        const likeDisplay = document.getElementById('likeCount');
-        const dislikeDisplay = document.getElementById('dislikeCount');
+    const likeBtn = document.getElementById('likeBtn');
+    const dislikeBtn = document.getElementById('dislikeBtn');
+    const likeDisplay = document.getElementById('likeCount');
+    const dislikeDisplay = document.getElementById('dislikeCount');
 
-        likeBtn.addEventListener('click', () => {
+    likeBtn.addEventListener('click', () => {
+        if (!likeBtn.classList.contains('active')) {
             likeCount++;
             likeDisplay.textContent = `Likes: ${likeCount}`;
-        });
+            
+            if (dislikeBtn.classList.contains('active')) {
+                dislikeCount--;
+                dislikeDisplay.textContent = `Dislikes: ${dislikeCount}`;
+                dislikeBtn.classList.remove('active');
+            }
 
-        dislikeBtn.addEventListener('click', () => {
+            likeBtn.classList.add('active');
+        } else {
+            likeCount--;
+            likeDisplay.textContent = `Likes: ${likeCount}`;
+            likeBtn.classList.remove('active');
+        }
+    });
+
+    dislikeBtn.addEventListener('click', () => {
+        if (!dislikeBtn.classList.contains('active')) {
             dislikeCount++;
             dislikeDisplay.textContent = `Dislikes: ${dislikeCount}`;
-        });
-    </script>
+            
+            if (likeBtn.classList.contains('active')) {
+                likeCount--;
+                likeDisplay.textContent = `Likes: ${likeCount}`;
+                likeBtn.classList.remove('active');
+            }
+
+            dislikeBtn.classList.add('active');
+        } else {
+            dislikeCount--;
+            dislikeDisplay.textContent = `Dislikes: ${dislikeCount}`;
+            dislikeBtn.classList.remove('active');
+        }
+    });
+</script>
+
 </body>
 </html>
